@@ -1,0 +1,22 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - client/**/*
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+Style/Lambda:
+  Enabled: false
+Style/ModuleFunction:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/WordArray:
+  Enabled: false
+Style/FormatStringToken:
+  EnforcedStyle: template
+inherit_from: .rubocop_todo.yml
