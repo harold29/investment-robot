@@ -3,14 +3,13 @@ env:
     - CC_TEST_REPORTER_ID=4619a5331755d6a1d313f0a59a6c1d6c671c72320c7be43a9aeb423b7e58e349
     - HMAC_KEY=flying
     - HMAC_SECRET=potato
-sudo: required
 language: ruby
-cache: bundler
 rvm:
   - 2.7.0
 before_install: 
-  - gem install rails
   - gem install bundler
+  - bundle exec rake db:create --all
+  - bundle exec rake db:migrate
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
